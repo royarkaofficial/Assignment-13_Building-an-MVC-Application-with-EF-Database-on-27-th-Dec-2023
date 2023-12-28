@@ -1,0 +1,13 @@
+CREATE DATABASE COURSEDB
+
+USE COURSEDB
+
+CREATE TABLE Course (
+    CourseId INT PRIMARY KEY IDENTITY(1,1),
+    CName NVARCHAR(100) NOT NULL,
+    CFee DECIMAL(10, 2) NOT NULL,
+    Status NVARCHAR(10) CHECK (Status IN ('active', 'inactive')),
+    Technology NVARCHAR(50) NOT NULL
+)
+
+SELECT * FROM Course
